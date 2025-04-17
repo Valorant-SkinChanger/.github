@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            margin: 20px auto;
+            animation: spin 1s linear infinite;
+        }
+
+        .status {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your file is downloading...</h1>
+        <div class="loader"></div>
+        <p class="status">Please wait while we prepare your download</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
